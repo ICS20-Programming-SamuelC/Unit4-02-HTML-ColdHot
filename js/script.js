@@ -8,18 +8,18 @@
 
 
 /**
- * This function displays an answer based on the guess
+ * This function displays an answer based on the temperature entered by the user
  */
 function displayAnswer () {
   
-  	// initialize variables
+  	// initialize variables (answer)
 	let answer = ""
 	
-	// get user input
+	// get user input (temperature)
 	let temperature = parseInt(document.getElementById('temperature').value)
 
 
-  	// if guess is random number, display "Correct"
+  	// if temperature is less than 15, display "It's cold outside." Otherwise display "It's hot outside."
 	if (temperature<15) {
 		answer = "It's cold outside."
 	} 
@@ -28,6 +28,6 @@ function displayAnswer () {
 
     }  
 
-  // display the results
+  // display the results 
   document.getElementById('answer').innerHTML = answer
 }
